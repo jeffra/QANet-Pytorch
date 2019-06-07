@@ -11,7 +11,7 @@ mkdir -p $GLOVE_DIR
 wget http://nlp.stanford.edu/data/glove.840B.300d.zip -O $GLOVE_DIR/glove.840B.300d.zip
 unzip $GLOVE_DIR/glove.840B.300d.zip -d $GLOVE_DIR
 
-PROCESSED_DIR=.data/processed/SQuAD
+PROCESSED_DIR=./data/processed/SQuAD
 mkdir -p $PROCESSED_DIR
 
 # Download Spacy language models
