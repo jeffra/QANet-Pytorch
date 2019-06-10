@@ -1,4 +1,9 @@
 #!/usr/bin/env bash
+
+# Install dependencies
+sudo apt-get -y install unzip wget
+sudo pip3.6 install spacy==2.0.11
+
 # Download SQuAD
 SQUAD_DIR=./data/original/SQuAD
 mkdir -p $SQUAD_DIR
@@ -15,4 +20,4 @@ PROCESSED_DIR=./data/processed/SQuAD
 mkdir -p $PROCESSED_DIR
 
 # Download Spacy language models
-python3.6 -m spacy download en
+sudo python3.6 -m spacy download en
