@@ -3,6 +3,11 @@
 # Path to processed data
 data_dir=/data/users/deepscale/data/qanet/processed
 
+if [ ! -d ${data_dir} ]; then
+    echo "Processed data directory does not exist, please create it first!"
+    exit 1
+fi
+
 squad_dir=${data_dir}/SQuAD
 squad_args="--train_processed_data ${squad_dir}/train-v1.1-processed.pkl \
             --dev_processed_data ${squad_dir}/dev-v1.1-processed.pkl \
